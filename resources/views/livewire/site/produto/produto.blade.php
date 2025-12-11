@@ -8,22 +8,22 @@
                     @if($galeria && $galeria->count() > 1)
                         <button type="button"
                                 class="btn btn-light position-absolute"
-                                style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 5; background:#abc49b; color: #fff !important;"
+                                style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 5; background:#87a3af; color: #fff !important;"
                                 wire:click="imagemAnterior">
                             ‹
                         </button>
 
                         <button type="button"
                                 class="btn btn-success position-absolute"
-                                style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 5; background:#abc49b; color: #fff !important;"
+                                style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 5; background:#87a3af; color: #fff !important;"
                                 wire:click="proximaImagem">
                             ›
                         </button>
                     @endif
 
-                    <img alt="{{ $produto->nome }}"
+                    <img  alt="{{ $produto->nome }}"
                          src="{{ $imagemAtiva }}"
-                         class="img-fluid mx-auto shadow-sm rounded">
+                         class="img-fluid mx-auto shadow-sm rounded produto-img">
 {{--                         class="produto-img img-fluid mx-auto shadow-sm rounded">--}}
                 </div>
 
@@ -278,12 +278,27 @@
         margin-top: 7px;
     }
 
-    .produto-img {
-        height: 500px;
-        width: 500px;
-        object-fit: cover
+
+
+
+    @media(min-width: 769px) {
+        .produto-img {
+            height: 500px;
+            /*width: 500px;*/
+            object-fit: cover
+        }
+
     }
 
+    @media(max-width: 768px) {
+        .produto-img {
+            height: 300px;
+            /*width: 500px;*/
+            object-fit: cover;
+            margin-top: 50px !important;
+        }
+
+    }
     /*************** Adicionar Pedido ***************/
     .adicionar-pedido-celular {
         position: fixed;

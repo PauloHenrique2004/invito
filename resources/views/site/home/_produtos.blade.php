@@ -34,11 +34,26 @@
 @endforeach
 
 <style>
-    .produto img {
-        margin-bottom: 10px !important;
-        /*height: 220px;*/
-        /*width: 220px;*/
-        /*object-fit: cover;*/
+
+
+    @media(min-width: 769px) {
+        .produto img {
+            margin-bottom: 10px !important;
+            height: 400px;
+            width: 220px;
+            object-fit: cover;
+        }
+
+    }
+
+    @media(max-width: 768px) {
+        .produto img {
+            margin-bottom: 10px !important;
+            height: 290px;
+            width: 220px;
+            object-fit: cover;
+        }
+
     }
 
     .produto h6 {

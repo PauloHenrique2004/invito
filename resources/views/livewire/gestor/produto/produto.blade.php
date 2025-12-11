@@ -117,6 +117,7 @@
             </div>
 
             {{-- Subcategoria (aparece só se a categoria tiver subcategorias) --}}
+            {{-- Subcategoria (aparece só se a categoria tiver subcategorias) --}}
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="subcategoria">Subcategoria do menu </label>
@@ -146,6 +147,7 @@
                     </small>
                 </div>
             </div>
+
 
 
             {{-- Seção destaque --}}

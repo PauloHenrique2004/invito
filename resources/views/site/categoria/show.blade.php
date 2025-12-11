@@ -45,11 +45,32 @@
     <style>
         /*.marrom-texto{ color: #87a3af; }*/
         .produto img { margin-bottom: 10px !important; }
-        .produto h6 { font-weight: 400; font-size: 14px; margin-left: 7px; }
-        .produto-nome { height: 33px; width: 93%; overflow: hidden !important; }
+        .produto h6 { font-weight: 400; font-size: 14px; margin-left: 7px;  color: #87a3af}
+        .produto-nome { height: 33px; width: 93%; overflow: hidden !important; color: #87a3af }
         .produto-valor { color: #808080; }
         @media (max-width: 992px) {
             .osahan-main-body { margin-top: 5em !important; }
         }
+
+        @media(min-width: 769px) {
+            .produto img {
+                margin-bottom: 10px !important;
+                height: 400px;
+                width: 220px;
+                object-fit: cover;
+            }
+
+        }
+
+        @media(max-width: 768px) {
+            .produto img {
+                margin-bottom: 10px !important;
+                height: 290px;
+                width: 220px;
+                object-fit: cover;
+            }
+
+        }
     </style>
 @endsection
+
