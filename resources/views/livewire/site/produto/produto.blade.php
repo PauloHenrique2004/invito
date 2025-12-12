@@ -92,11 +92,11 @@
                     <!-- Descrição -->
                     @if($produto->descricao)
                         <div class="details" style="padding-left: 10px">
-                            <p class="text-muted small mb-0">
-                                {{ $produto->descricao }}
-                            </p>
+                            <span class="text-muted small mb-0">
+                                {!!  $produto->descricao !!}
+                            </span>
                         </div>
-                @endif
+                      @endif
                 <!-- / Descrição -->
 
                     <div class="grupos">
