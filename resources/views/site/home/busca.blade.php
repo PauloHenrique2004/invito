@@ -15,15 +15,15 @@
                         <div class="col-6 col-md-3 mb-3">
                             <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
                                 <div class="list-card-image produto">
-                                    <a href="{{ route('produtos.show', [$produto->slug, $produto->id]) }}"
-                                       class="marrom-texto">
+                                    <a href="{{ route('produtos.show', [$produto->slug, $produto]) }}"
+                                       class="color-titulo-lista-produtos">
                                         <img alt="{{ $produto->nome }}"
                                              src="{{ asset($produto->fotoUrl()) }}"
                                              class="img-fluid item-img w-100 mb-3">
 
-                                        <h6 class="produto-nome marrom-texto">{{ $produto->nome }}</h6>
+                                        <h6 class="produto-nome ">{{ $produto->nome }}</h6>
 
-                                        <h6 class="produto-valor" style="font-size:17px;font-weight:800;color:#87a3af;">
+                                        <h6 class="produto-valor" style="font-size: 17px;font-weight: 800; color: #87a3af;">
                                             @include('shared.produto._produto-preco', compact('produto'))
                                         </h6>
                                     </a>
@@ -39,8 +39,10 @@
     </section>
 @endsection
 
-{{--<style>--}}
-{{--    .marrom-texto {--}}
-{{--        color: #87a3af;--}}
-{{--    }--}}
-{{--</style>--}}
+<style>
+    .produto h6 {
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 7px;
+    }
+</style>

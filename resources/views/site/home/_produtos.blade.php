@@ -36,25 +36,6 @@
 <style>
 
 
-    @media(min-width: 769px) {
-        .produto img {
-            margin-bottom: 10px !important;
-            height: 400px;
-            width: 220px;
-            object-fit: cover;
-        }
-
-    }
-
-    @media(max-width: 768px) {
-        .produto img {
-            margin-bottom: 10px !important;
-            height: 290px;
-            width: 220px;
-            object-fit: cover;
-        }
-
-    }
 
     .produto h6 {
         font-weight: 400;
@@ -68,7 +49,5 @@
         overflow: hidden !important;
     }
 
-    .produto-valor {
-        color: #808080;
-    }
+
 </style>
