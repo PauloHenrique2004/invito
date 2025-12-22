@@ -217,12 +217,12 @@
                 <label for="ativo">*Produto Ativo/Inativo</label>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="ativo"
+                        <input class="form-check-input" type="radio" name="ativo" required
                                id="ativo" value="1" wire:model="produto.ativo">
                         <label class="form-check-label" for="ativo">Ativo</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inativo"
+                        <input class="form-check-input" type="radio" name="ativo" required
                                id="inativo" value="0" wire:model="produto.ativo">
                         <label class="form-check-label" for="inativo">Inativo</label>
                     </div>
