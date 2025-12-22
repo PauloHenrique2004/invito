@@ -188,19 +188,49 @@
             </div>
 
             {{-- Promocional --}}
+{{--            <div class="col-md-6">--}}
+{{--                <div class="form-group" style="display: flex">--}}
+{{--                    <div class="form-check">--}}
+{{--                        <input class="form-check-input" type="radio" name="sim-promocional" id="sim-promocional"--}}
+{{--                               value="1" wire:model="produto.promocional">--}}
+{{--                        <label class="form-check-label" for="sim-promocional">Preço Promocional</label>--}}
+{{--                    </div>--}}
+{{--                    <div class="form-check ml-2">--}}
+{{--                        <input class="form-check-input" type="radio" name="nao-promocional"--}}
+{{--                               id="nao-promocional" value="0" wire:model="produto.promocional">--}}
+{{--                        <label class="form-check-label" for="nao-promocional">Preço Normal</label>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
             <div class="col-md-6">
-                <div class="form-group" style="display: flex">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sim-promocional" id="sim-promocional"
-                               value="1" wire:model="produto.promocional">
+                <div class="form-group d-flex">
+                    <div class="form-check mr-3">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="promocional"
+                               id="sim-promocional"
+                               value="1"
+                               wire:model="produto.promocional"
+                        >
                         <label class="form-check-label" for="sim-promocional">Preço Promocional</label>
                     </div>
-                    <div class="form-check ml-2">
-                        <input class="form-check-input" type="radio" name="nao-promocional"
-                               id="nao-promocional" value="0" wire:model="produto.promocional">
+
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="promocional"
+                               id="nao-promocional"
+                               value="0"
+                               wire:model="produto.promocional"
+                        >
                         <label class="form-check-label" for="nao-promocional">Preço Normal</label>
                     </div>
                 </div>
+
+                @error('produto.promocional')
+                <span class="text-danger small">{{ $message }}</span>
+                @enderror
             </div>
 
             @if($produto->promocional)
