@@ -167,7 +167,7 @@
         <div class="row mt-5">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="rua">*Rua</label>
+                    <label for="rua">Rua</label>
                     <input type="text" class="form-control @error('rua') is-invalid @enderror" id="rua" name="rua"
                            value="{{ old('rua', $configuracao->rua) }}">
                     @error('rua')
@@ -178,7 +178,7 @@
 
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="bairro">*Bairro</label>
+                    <label for="bairro">Bairro</label>
                     <input type="text" class="form-control @error('bairro') is-invalid @enderror" id="bairro"
                            name="bairro"
                            value="{{ old('bairro', $configuracao->bairro) }}">
@@ -192,7 +192,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="cidade">*Cidade</label>
+                    <label for="cidade">Cidade</label>
                     <input type="text" class="form-control @error('cidade') is-invalid @enderror" id="cidade"
                            name="cidade"
                            value="{{ old('cidade', $configuracao->cidade) }}">
@@ -204,7 +204,7 @@
 
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="estado">*Estado</label>
+                    <label for="estado">Estado</label>
                     <input type="text" class="form-control @error('estado') is-invalid @enderror" id="estado"
                            name="estado"
                            value="{{ old('estado', $configuracao->estado) }}">
