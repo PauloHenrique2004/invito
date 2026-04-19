@@ -8,14 +8,14 @@
                     @if($galeria && $galeria->count() > 1)
                         <button type="button"
                                 class="btn btn-light position-absolute"
-                                style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 5; background:#87a3af; color: #fff !important;"
+                                style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 5; background:#697b2b; color: #fff !important;"
                                 wire:click="imagemAnterior">
                             ‹
                         </button>
 
                         <button type="button"
                                 class="btn btn-success position-absolute"
-                                style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 5; background:#87a3af; color: #fff !important;"
+                                style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 5; background:#697b2b; color: #fff !important;"
                                 wire:click="proximaImagem">
                             ›
                         </button>
@@ -148,7 +148,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content border-0 rounded-lg shadow-lg">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title" style="color:#87a3af;">
+                    <h5 class="modal-title" style="color:#697b2b;">
                         Produto adicionado ao carrinho
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -173,7 +173,7 @@
 
                     <a href="{{ route('carrinho') }}"
                        class="btn text-white"
-                       style="background:#87a3af;">
+                       style="background:#697b2b;">
                         Concluir pedido
                     </a>
                 </div>
@@ -189,7 +189,7 @@
 {{--                    <h5 class="modal-title text-danger font-weight-bold" style="font-size: 1.2rem;">--}}
 {{--                        Atenção--}}
 {{--                    </h5>--}}
-{{--                    <h5 class="modal-title" style="color:#87a3af;">--}}
+{{--                    <h5 class="modal-title" style="color:#697b2b;">--}}
 {{--                        Atenção--}}
 {{--                    </h5>--}}
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -413,7 +413,7 @@
     }
 
     .btn-itens-obrigatorios {
-        background: #87a3af;
+        background: #697b2b;
         color: #fff;
         border-radius: 999px;
         padding: 0.5rem 1.6rem;

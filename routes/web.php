@@ -45,6 +45,7 @@ Route::group(['prefix' => 'gestor'], function () {
 Route::namespace('Site')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 
+    Route::get('/sobre-nos', 'SobreNosController@sobre')->name('sobre-nos');
 
     Route::get('/categoria/{slug}/{id}', 'HomeController@categoria')->name('categoria');
     Route::get('/promocoes', 'HomeController@promocoes')->name('promocoes');
@@ -82,6 +83,9 @@ Route::namespace('Gestor')->name('gestor.')->prefix('gestor')->middleware('gesto
 
     Route::resource('paginas', 'PaginasController')->parameters(['paginas' => 'pagina'])->only('index', 'destroy');
     Route::get('/pagina/{id?}', 'PaginasController@livewire')->name('pagina');
+
+    Route::get('sobre-nos', 'SobreNosController@edit')->name('sobre-nos.edit');
+    Route::put('sobre-nos', 'SobreNosController@update')->name('sobre-nos.update');
 
     Route::resource('usuarios', 'UsuariosController')->parameters(['usuarios' => 'user'])->only('index', 'destroy');
     Route::get('/usuario/{usuario?}', [\App\Http\Livewire\Gestor\Usuario\Usuario::class, '__invoke'])->name('usuario');

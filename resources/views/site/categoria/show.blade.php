@@ -23,7 +23,7 @@
 
                                         <h6 class="produto-nome marrom-texto">{{ $produto->nome }}</h6>
 
-                                        <h6 class="produto-valor" style="font-size:17px;font-weight:800;color:#87a3af;">
+                                        <h6 class="produto-valor" style="font-size:17px;font-weight:800;color:#697b2b;">
                                             @include('shared.produto._produto-preco', compact('produto'))
                                         </h6>
                                     </a>
@@ -43,10 +43,10 @@
     </section>
 
     <style>
-        /*.marrom-texto{ color: #87a3af; }*/
+        /*.marrom-texto{ color: #697b2b; }*/
         .produto img { margin-bottom: 10px !important; }
-        .produto h6 { font-weight: 400; font-size: 14px; margin-left: 7px;  color: #87a3af}
-        .produto-nome { height: 33px; width: 93%; overflow: hidden !important; color: #87a3af }
+        .produto h6 { font-weight: 400; font-size: 14px; margin-left: 7px;  color: #697b2b}
+        .produto-nome { height: 33px; width: 93%; overflow: hidden !important; color: #697b2b }
         .produto-valor { color: #808080; }
         @media (max-width: 992px) {
             .osahan-main-body { margin-top: 5em !important; }

@@ -23,7 +23,7 @@
 
                                         <h6 class="produto-nome ">{{ $produto->nome }}</h6>
 
-                                        <h6 class="produto-valor" style="font-size: 17px;font-weight: 800; color: #87a3af;">
+                                        <h6 class="produto-valor" style="font-size: 17px;font-weight: 800; color: #697b2b;">
                                             @include('shared.produto._produto-preco', compact('produto'))
                                         </h6>
                                     </a>

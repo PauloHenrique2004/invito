@@ -98,12 +98,18 @@ return [
             'visibility' => 'public',
         ],
 
+        'storage_sobre' => [
+            'driver' => 'local',
+            'root' => storage_path('app/storage_sobre'), // Mantemos aqui para bater com o 'links'
+            'url' => env('APP_URL') . '/storage_sobre',  // URL direta via link simbólico
+            'visibility' => 'public',
+        ],
 
 
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
@@ -119,15 +125,15 @@ return [
 
     ],
 
-//    'links' => [
-//
-//        public_path('storage_produtos') => storage_path('app/storage_produtos'),
-//        public_path('storage_paginas') => storage_path('app/storage_paginas'),
-//        public_path('storage_produto_categorias') => storage_path('app/storage_produto_categorias'),
-//        public_path('storage_slides') => storage_path('app/storage_slides'),
-//        public_path('livewire-tmp') => storage_path('app/livewire-tmp'),
-//        public_path('storage_configuracoes') => storage_path('app/storage_configuracoes'),
-//    ],
+    //    'links' => [
+    //
+    //        public_path('storage_produtos') => storage_path('app/storage_produtos'),
+    //        public_path('storage_paginas') => storage_path('app/storage_paginas'),
+    //        public_path('storage_produto_categorias') => storage_path('app/storage_produto_categorias'),
+    //        public_path('storage_slides') => storage_path('app/storage_slides'),
+    //        public_path('livewire-tmp') => storage_path('app/livewire-tmp'),
+    //        public_path('storage_configuracoes') => storage_path('app/storage_configuracoes'),
+    //    ],
 
 
     'links' => [
@@ -138,7 +144,8 @@ return [
         public_path('storage_slides') => storage_path('app/storage_slides'),
         public_path('livewire-tmp') => storage_path('app/livewire-tmp'),
         public_path('storage_topo_banners') => storage_path('app/storage_topo_banners'),
-        public_path('storage_depoimentos') => storage_path('app/storage_depoimentos')
+        public_path('storage_depoimentos') => storage_path('app/storage_depoimentos'),
+        public_path('storage_sobre') => storage_path('app/storage_sobre')
     ],
 
 ];

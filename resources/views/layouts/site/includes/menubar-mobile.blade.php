@@ -5,7 +5,7 @@
         </li>
 
         <li>
-            <a href="/paginas/sobre-nos/1">
+            <a href="/sobre-nos">
                 <i class="icofont-info-circle mr-2"></i> Sobre nós
             </a>
         </li>

@@ -12,6 +12,7 @@
             <div class="osahan-home-page">
                 <!-- body -->
                 <div class="osahan-body">
+                    @include('site.home._sobre')
                     @include('site.home._beneficios')
                     @include('site.home._categorias')
                     @include('site.home._slide')

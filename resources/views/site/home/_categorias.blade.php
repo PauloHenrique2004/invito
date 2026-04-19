@@ -6,9 +6,11 @@
                     <div class="osahan-body">
 
                         <div class="pt-3 pb-2 osahan-categories">
+                            @if($categorias->isNotEmpty())
                             <div class="d-flex align-items-center mb-3">
                                 <h5 class="m-0 titulo-sessoes">O que você está procurando?</h5>
                             </div>
+                            @endif
 
                             <div class="categories-slider">
                                 @foreach($categorias as $key => $categoria)
@@ -82,7 +84,7 @@
         display: block;
         margin-top: 8px;
         font-size: 0.85rem;
-        color: #87a3af;
+        color: #697b2b;
     }
 
     /* slick arrows mais discretas */
@@ -95,7 +97,7 @@
 
     .categories-slider .slick-prev:before,
     .categories-slider .slick-next:before {
-        color: #87a3af;
+        color: #697b2b;
         font-size: 26px;
     }
 
@@ -112,7 +114,7 @@
 
 
     /*.marrom-texto {*/
-    /*    color: #87a3af;*/
+    /*    color: #697b2b;*/
     /*}*/
 
 </style>

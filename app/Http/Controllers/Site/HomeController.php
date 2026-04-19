@@ -8,12 +8,20 @@ use App\Models\Slide;
 use App\Models\TopoBanner;
 use App\Models\Depoimento;
 use App\Models\ProdutoDestaque;
+use App\Models\SobreNos;
 
 class HomeController extends Controller
 {
     public function index()
     {
         $busca = request('busca');
+
+        $sobreNos = SobreNos::with('imagens')->first();
+
+        if (!$sobreNos) {
+            $sobreNos = new SobreNos(SobreNos::defaults());
+            $sobreNos->setRelation('imagens', collect());
+        }
 
         if ($busca) {
             // quando tiver texto na busca, mostra só os produtos filtrados
@@ -22,7 +30,7 @@ class HomeController extends Controller
                 ->orderBy('nome')
                 ->get();
 
-            return view('site.home.busca', compact('busca', 'produtos'));
+            return view('site.home.busca', compact('busca', 'produtos', 'sobreNos'));
         }
 
         // home normal (sem busca)
@@ -49,6 +57,7 @@ class HomeController extends Controller
 
         $categorias = ProdutoCategoria::where('exibir_topo', 0)->get();
 
+
         $depoimentos = Depoimento::where('ativo', true)
             ->orderBy('ordem')
             ->orderBy('id', 'desc')
@@ -59,7 +68,8 @@ class HomeController extends Controller
             'topoBanners',
             'categorias',
             'secoes',
-            'depoimentos'
+            'depoimentos',
+            'sobreNos'
         ));
     }
 
@@ -84,6 +94,8 @@ class HomeController extends Controller
         $produtos = Produto::ativos()->promocionais()->get();
 
         $categorias = ProdutoCategoria::where('exibir_topo', 0)->get();
+
+        $sobreNos = SobreNos::with('imagens')->first();
 
         $topoBanners = TopoBanner::where('ativo', true)
             ->orderBy('ordem')
@@ -120,6 +132,6 @@ class HomeController extends Controller
 
 
 
-        return view('site.home.index', compact('slides', 'produtos', 'categorias', 'topoBanners', 'secoes', 'destaquesHome', 'depoimentos'));
+        return view('site.home.index', compact('slides', 'produtos', 'categorias', 'topoBanners', 'secoes', 'destaquesHome', 'depoimentos', 'sobreNos'));
     }
 }

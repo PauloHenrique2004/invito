@@ -53,7 +53,7 @@
         }
 
         .about-title {
-            color: #87a3af;
+            color: #697b2b;
             font-weight: 600;
         }
 

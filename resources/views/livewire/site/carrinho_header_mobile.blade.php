@@ -1,4 +1,4 @@
-<div class="btn btn-success mt-3 mobile-cart-total" style="background: #87a3af; border-color: #87a3af">
+<div class="btn btn-success mt-3 mobile-cart-total" style="background: #697b2b; border-color: #697b2b">
     <div onclick="window.location = '{{ route('carrinho') }}'" class="ml-2 mobile-cart-total-wrapper">
         <span style="font-size: 15px;">
             <i class="icofont-shopping-cart"></i>

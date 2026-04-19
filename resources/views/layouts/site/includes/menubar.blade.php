@@ -9,7 +9,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white pl-0" href="/paginas/sobre-nos/1">Sobre nós</a>
+                <a class="nav-link text-white pl-0" href="/sobre-nos">Sobre nós</a>
             </li>
 
 {{--            @foreach($menuCategorias as $cat)--}}

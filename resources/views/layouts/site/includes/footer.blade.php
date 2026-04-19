@@ -251,7 +251,7 @@
         </div>
     </section>
 
-    <section class="footer-bottom py-3" id="horarioFuncionamento" style="background:#87a3af; color:#fff;">
+    <section class="footer-bottom py-3" id="horarioFuncionamento" style="background:#697b2b; color:#fff;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-2 mb-md-0">

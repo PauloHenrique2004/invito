@@ -3,7 +3,7 @@
 {{--        <small>A partir de</small><br>--}}
 {{--    @endif--}}
 
-{{--    <span style="color: #87a3af">--}}
+{{--    <span style="color: #697b2b">--}}
 {{--        R$ {{ number_format($produto->preco_promocional, 2, ',', '.') }}--}}
 {{--    </span>--}}
 
@@ -33,7 +33,7 @@
     @endif
 
     {{-- preço antigo riscado, menor e antes --}}
-    <span style="font-size: 12px; color: #87a3af;">
+    <span style="font-size: 12px; color: #697b2b;">
         @if($produto->preco_a_partir_de && $produto->preco_a_partir_de > 0)
             <s>R$ {{ number_format($produto->preco_a_partir_de, 2, ',', '.') }}</s>
         @else
@@ -42,7 +42,7 @@
     </span>
 
     {{-- preço promocional em destaque --}}
-    <span style="color: #87a3af; font-weight: 700; margin-left: 4px;">
+    <span style="color: #697b2b; font-weight: 700; margin-left: 4px;">
         R$ {{ number_format($produto->preco_promocional, 2, ',', '.') }}
     </span>
 @else

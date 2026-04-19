@@ -1,13 +1,13 @@
 <aside class="main-sidebar elevation-4 sidebar-light-info">
     <!-- Brand Logo -->
-{{--    <a href="{{ route('gestor.home')  }}" class="brand-link">--}}
-{{--        <img src="{{ asset($configuracoes->logo) }}" alt="Logo" class="animate__animated animate__headShake"--}}
-{{--             style="width: 150px; display: block; margin: 0 auto;">--}}
+    {{-- <a href="{{ route('gestor.home')  }}" class="brand-link">--}}
+    {{-- <img src="{{ asset($configuracoes->logo) }}" alt="Logo" class="animate__animated animate__headShake"--}}
+    {{-- style="width: 150px; display: block; margin: 0 auto;">--}}
 
-        {{--        <span class="brand-text font-weight-light" style="text-align: center; display: block">--}}
-        {{--            {{ config('app.name') }}--}}
-        {{--        </span>--}}
-{{--    </a>--}}
+    {{-- <span class="brand-text font-weight-light" style="text-align: center; display: block">--}}
+    {{-- {{ config('app.name') }}--}}
+    {{-- </span>--}}
+    {{-- </a>--}}
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -34,8 +34,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('gestor.pagina', 1) }}" class="nav-link">
-                                <i class="nav-icon fas fa-file-word"></i>
+                            <a href="{{ route('gestor.sobre-nos.edit') }}"
+                                class="nav-link {{ Route::is('gestor.sobre-nos.*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-address-card"></i>
                                 <p>Site - Sobre nós</p>
                             </a>
                         </li>
@@ -45,12 +46,12 @@
                                 <p>Endereços Atendidos</p>
                             </a>
                         </li>
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('gestor.endereco.enderecos_atendidos.index') }}" class="nav-link">--}}
-{{--                                <i class="nav-icon fas fa-globe-americas"></i>--}}
-{{--                                <p>Endereços Atendidos</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                        {{-- <li class="nav-item">--}}
+                        {{-- <a href="{{ route('gestor.endereco.enderecos_atendidos.index') }}" class="nav-link">--}}
+                        {{-- <i class="nav-icon fas fa-globe-americas"></i>--}}
+                        {{-- <p>Endereços Atendidos</p>--}}
+                        {{-- </a>--}}
+                        {{-- </li>--}}
                         <li class="nav-item">
                             <a href="{{ route('gestor.gestores.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
@@ -160,12 +161,12 @@
                 </li>
 
 
-                {{--                <li class="nav-item">--}}
-                {{--                    <a href="{{ route('gestor.pagina', $pagina->id) }}" class="nav-link">--}}
-                {{--                        <i class="nav-icon fas fa-file-word"></i>--}}
-                {{--                        <p>Páginas</p>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
+                {{-- <li class="nav-item">--}}
+                {{-- <a href="{{ route('gestor.pagina', $pagina->id) }}" class="nav-link">--}}
+                {{-- <i class="nav-icon fas fa-file-word"></i>--}}
+                {{-- <p>Páginas</p>--}}
+                {{-- </a>--}}
+                {{-- </li>--}}
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
